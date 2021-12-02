@@ -1,0 +1,20 @@
+{
+  "name": "automated-speedtest-raspberrypi",
+  "version": "1.0.0",
+  "description": "Automatically run speedtest on Raspberry Pi and log to CSV",
+  "main": "src/entry.js",
+  "scripts": {
+    "start": "node src/entry.js",
+    "dev": "nodemon src/entry.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ip": "^1.1.5",
+    "speedtest-net": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
