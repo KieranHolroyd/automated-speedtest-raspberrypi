@@ -52,11 +52,11 @@ console.log(
   });
   process.stdout.write(`\n`);
   // Read results.csv file and append new result
-  let csv = fs.readFileSync(__dirname + "results.csv", "utf8");
+  let csv = fs.readFileSync(__dirname + "/results.csv", "utf8");
   csv += `${Date.now()},${macaddress},${fixBandwidth(
     result.download.bandwidth
   )},${fixBandwidth(result.upload.bandwidth)},${result.ping.latency},${
     result.result.url
   }\n`;
-  fs.writeFileSync(__dirname + "results.csv", csv);
+  fs.writeFileSync(__dirname + "/results.csv", csv);
 })();
