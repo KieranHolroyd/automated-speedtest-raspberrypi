@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 4182;
 
 app.get("/results", (req, res) => {
-  res.sendFile("./results.csv");
+  res.sendFile(__dirname + "./results.csv");
 });
 
 app.listen(port, () => {
