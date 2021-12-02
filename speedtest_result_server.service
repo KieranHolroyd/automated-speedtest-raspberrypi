@@ -1,0 +1,17 @@
+[Unit]
+Description=ExpressJS server for hosting results of periodic speedtests
+Documentation=https://github.com/KieranHolroyd/automated-speedtest-raspberrypi
+After=network.target
+
+[Service]
+# Use a custom port for the webserver [Default is 4182]
+# Environment=PORT={customed_port}
+Type=simple
+# Run as pi (root not advised)
+User=pi
+# Change the second path to where you installed the repository on your system
+ExecStart=/usr/bin/node /home/pi/automated-speedtest-raspberrypi/src/webserver.js 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
